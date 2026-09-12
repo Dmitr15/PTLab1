@@ -3,6 +3,7 @@ import sys
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
 from XmlDataReader import XmlDataReader
+from CountDebtors import CountDebtors
 
 
 def get_path_from_arguments(args) -> str:
@@ -26,6 +27,8 @@ def main():
     print("Students: ", students)
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
+    debtors_count = CountDebtors(students).calc()
+    print("Students with exactly 2 debts: ", debtors_count)
 
 
 if __name__ == "__main__":
